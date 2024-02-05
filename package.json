@@ -1,0 +1,19 @@
+{
+  "name": "mern-ecom-backend",
+  "version": "1.0.0",
+  "description": "MERN Ecommerce Backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "express": "^4.17.2",
+    "mongoose": "^6.12.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
