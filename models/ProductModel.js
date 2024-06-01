@@ -38,6 +38,7 @@ const productSchema = mongoose.Schema(
       default: 0,
     },
     attrs: [{ key: { type: String }, value: { type: String } }],
+    //[{key: 'color', value: 'red'}, {key: 'size', value: 'XL']
     images: [imageSchema],
     reviews: [
       {
@@ -52,5 +53,11 @@ const productSchema = mongoose.Schema(
 );
 
 const Product = mongoose.model('Product', productSchema);
+
+productSchema.index(
+  { name: 'text', description: 'text' },
+  { name: 'TextIndex' },
+);
+productSchema.index({ 'attrs.key': 1, 'attrs.value': 1 });
 
 module.exports = Product;
