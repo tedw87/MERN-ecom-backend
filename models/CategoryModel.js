@@ -7,5 +7,6 @@ const categorySchema = mongoose.Schema({
   attrs: [{ key: { type: String }, value: [{ type: String }] }],
 });
 
+categorySchema.index({ description: 1 });
 const Category = mongoose.model('Category', categorySchema);
 module.exports = Category;
